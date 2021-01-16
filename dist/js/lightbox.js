@@ -504,6 +504,7 @@
   };
 
   Lightbox.prototype.enableKeyboardNav = function() {
+    this.disableKeyboardNav();
     this.$lightbox.on('keyup.keyboard', $.proxy(this.keyboardAction, this));
     this.$overlay.on('keyup.keyboard', $.proxy(this.keyboardAction, this));
   };
